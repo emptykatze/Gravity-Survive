@@ -116,7 +116,7 @@ if plt!=1:
     p23=pygame.transform.scale(pygame.image.load("imagenes/planets/23.png"),(50,50))
     p24=pygame.transform.scale(pygame.image.load("imagenes/planets/24.png"),(50,50))
     
-
+tutp2=pygame.image.load("imagenes/planets/2.png")
 """estrellas"""
 if plt==1:
     e1=pygame.transform.scale(pygame.image.load("imagenes/Planetas/e1.png"),(100,100))

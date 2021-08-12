@@ -332,22 +332,22 @@ def main():
         """ ######################## NIVELES ########################"""
         """ #########################################################"""    
         """ #########################################################"""
-        
+                
         """ #########################################################"""
         """ #########################################################"""
         """ ######################## MUNDO 1 ########################"""
         """ #########################################################"""    
         """ #########################################################"""
         if nm1[0]==True:
-            dt=0.3
-            combustible=100
+            dt=0.15
+            combustible=500
             juego=True
             imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(500, [600, 200], [20,0],50,im.p2)
             p2 = planeta(50, [300, 360], [0,15],50,im.p23)
             p3 = planeta(50, [100000, 300], [2,0],50,im.p24)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0]+p1.tamaño-20,p1.posicion[1]), [10,-4],10,im.e4)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]+p1.tamaño/2,p1.posicion[1]), [0,0],10,im.e4)
             planetas= [COHETE,p1,e1,p2,p3]
             planetasv=[p1,p2,p3]
             poscohete=(1,1)
@@ -362,7 +362,7 @@ def main():
             
         if nm1[1]==True:
             dt=0.15
-            combustible=100
+            combustible=500
             juego=True
             imp2=p1=pygame.image.load("imagenes/planets/3.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e4)
@@ -386,7 +386,7 @@ def main():
             dt=0.15
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [8009, 100], [15,0],50,im.p6)
@@ -410,7 +410,7 @@ def main():
             dt=0.15
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e4)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -433,7 +433,7 @@ def main():
             dt=0.15
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -456,7 +456,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -479,7 +479,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -501,7 +501,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -523,7 +523,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -546,7 +546,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -569,7 +569,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -592,7 +592,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -615,7 +615,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -638,7 +638,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -661,7 +661,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -684,7 +684,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -706,7 +706,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -728,7 +728,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -751,7 +751,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -774,7 +774,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -802,12 +802,12 @@ def main():
             dt=0.3
             combustible=1000
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
             p3 = planeta(50, [200, 300], [0,14],50,im.p4)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
+            COHETE=planeta(1*10**(-10), (0,0), [10,-4],10,im.e4)
             planetas= [COHETE,p1,e1,p2,p3]
             planetasv=[p1,p2,p3]
             poscohete=(1,1)
@@ -823,7 +823,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -845,7 +845,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -868,7 +868,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -891,7 +891,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -914,7 +914,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -937,7 +937,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -959,7 +959,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -981,7 +981,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1004,7 +1004,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1027,7 +1027,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1050,7 +1050,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1073,7 +1073,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1096,7 +1096,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1119,7 +1119,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1142,7 +1142,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1164,7 +1164,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1186,7 +1186,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1209,7 +1209,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1232,7 +1232,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e2)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1260,7 +1260,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p7)
             p2 = planeta(50, [800, 100], [15,0],50,im.p8)
@@ -1282,7 +1282,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1304,7 +1304,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1327,7 +1327,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1350,7 +1350,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1373,7 +1373,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1396,7 +1396,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1418,7 +1418,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1440,7 +1440,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1463,7 +1463,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1486,7 +1486,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1509,7 +1509,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1532,7 +1532,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1555,7 +1555,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1578,7 +1578,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1601,7 +1601,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1623,7 +1623,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1645,7 +1645,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1668,7 +1668,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1691,7 +1691,7 @@ def main():
             dt=0.3
             combustible=100
             juego=True
-            imp2=p1=pygame.image.load("imagenes/Planetas/p1.png")
+            imp2=p1=pygame.image.load("imagenes/planets/23.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
             p1 = planeta(50, [600, 250], [30,0],50,im.p5)
             p2 = planeta(50, [800, 100], [15,0],50,im.p6)
@@ -1894,7 +1894,12 @@ def main():
             planeta1=intro.planeta1
             planeta2=intro.planeta2
             planeta3=intro.planeta3
-            sol=intro.sol
+            """
+            planeta1=im.p21
+            planeta2=im.p7
+            planeta3=im.p6"""
+            #sol=intro.sol
+            sol=pygame.transform.scale(im.e2,(200,200))
             tamañoplaneta=intro.tamañoplaneta
             
             xp1=xp1+vp1
@@ -1915,7 +1920,7 @@ def main():
                 pantalla.blit(planeta1,(xp1,yp1))
             
                               
-            pantalla.blit(sol,(ancho/2-500,alto/2-215))
+            pantalla.blit(sol,(ancho/2-500+125,alto/2-215+100))
             
             if vp1>0:
                 vp1=vp1/1
@@ -2139,12 +2144,15 @@ def main():
         """ #########################################################"""    
         """ #########################################################"""
         
+        
         if juego==True and menu2==False:  
             lost=False
             if pygame.key.get_focused()==0:
                 pausa=True
                 juego=False
                 
+            if p2 in planetasv:
+                planetasv.pop(planetasv.index(p2))
             #calcular el centro de un planeta y su distancia al cohete
             for m in planetas:
                 m.centro=m.posicion-(COHETE.tamaño/2,COHETE.tamaño/2)
@@ -2221,7 +2229,7 @@ def main():
                 m.cohete=np.sqrt(((m.centro[0])-(COHETE.posicion[0]))**2+((m.centro[1])-(COHETE.posicion[1]))**2)
             
             for m in planetasv:
-                if m.cohete<m.tamaño/2+COHETE.tamaño/2+6:# and combustible>0:
+                if m.cohete<m.tamaño/2+COHETE.tamaño/2+6:
                     if m.cohete>m.tamaño/2+COHETE.tamaño/2:
                         movimiento=False
                     if m.cohete<m.tamaño/2+COHETE.tamaño/2:
@@ -2247,6 +2255,8 @@ def main():
                                 COHETE.posicion[1]=COHETE.posicion[1]-3
                         if COHETE.posicion[1]-m.posicion[1]>0 and DOWN==1:
                                 COHETE.posicion[1]=COHETE.posicion[1]+3
+            
+            
             #actualizar combustible
             if combustible>0:
                 if RIGHT==1 or LEFT==-1 or UP==-1 or DOWN==1:
@@ -2282,15 +2292,7 @@ def main():
             if click_sostenido==True:
                 for m in planetas:
                         m.posicion=m.posicion+[(mousex-xinicial),(mousey-yinicial)]
-                """if dt==0.3:
-                    for m in planetas:
-                        m.posicion=m.posicion+[(mousex-xinicial),(mousey-yinicial)]
-                if dt==0.2:
-                    for m in planetas:
-                        m.posicion=m.posicion+[(mousex-xinicial)/2,(mousey-yinicial)/2]
-                """
-                #fondojuegox,fondojuegoy=fondojuegox+(mousex-xinicial)*1.5,fondojuegoy+(mousey-yinicial)*1.5
-            
+                        
             #actualizar lost si p2 no esta
             if p2 in planetas: pass
             else:
@@ -3187,7 +3189,7 @@ def main():
         lm3=l[40:60]
         try:
             for i in l: 
-                if np.sqrt((((p2.posicion-(COHETE.tamaño/2,COHETE.tamaño/2))[0])-(COHETE.posicion[0]))**2+(((p2.posicion-(COHETE.tamaño/2,COHETE.tamaño/2))[1])-(COHETE.posicion[1]))**2)<p2.tamaño/2+COHETE.tamaño/2 and i==True:
+                if np.sqrt((((p2.posicion-(COHETE.tamaño/2,COHETE.tamaño/2))[0])-(COHETE.posicion[0]))**2+(((p2.posicion-(COHETE.tamaño/2,COHETE.tamaño/2))[1])-(COHETE.posicion[1]))**2)<p2.tamaño/2+COHETE.tamaño/2+.5 and i==True:
                     siguiente_nivel=True
                     siguiente2=True
                     juego=False
@@ -3343,7 +3345,8 @@ def main():
             texto("Planeta",40,550,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Cohete",40,850,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             pantalla.blit(pygame.transform.scale(im.e2,(150,150)),(250,280))
-            pantalla.blit(pygame.transform.scale(im.p2,(75,75)),(577.5,355))
+            
+            pantalla.blit(pygame.transform.scale(im.tutp2,(75,75)),(577.5,355))
             pantalla.blit(pygame.transform.scale(im.e4,(30,30)),(890,400))
         
         if como_jugar3==True:
