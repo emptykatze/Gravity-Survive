@@ -1156,10 +1156,10 @@ def main():
             juego=True
             imp2=p1=pygame.image.load("imagenes/planets/9.png")
             e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [500, 360], [0,28],50,im.p7)
-            p2 = planeta(50, [1000, 370], [0,15],50,im.p9)
-            p3 = planeta(50, [700, 380], [0,-38],50,im.p24)
-            p4 = planeta(50, [400, 390], [0,21],50,im.p14)
+            p1 = planeta(50, [900, 50], [10,20],50,im.p5)
+            p2 = planeta(50, [700, 360], [0,-30],50,im.p14)
+            p3 = planeta(50, [500, 360], [0,30],50,im.p21)
+            p4 = planeta(50, [400, 360], [0,-20],50,im.p16)
             p5 = planeta(50, [800, 400], [0,-21],50,im.p11)
             COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño/2+17), [10,-4],10,im.e4)
             planetas= [COHETE,p1,e1,p2,p3,p4,p5]
@@ -1279,18 +1279,20 @@ def main():
         """ ######################## MUNDO 3 ########################"""
         """ #########################################################"""    
         """ #########################################################"""
+        plax,play=600,360
         if nm3[0]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p7)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p8)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p9)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/6.png")
+            e1 = planeta(100000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(450, [plax+85, play], [0,-37],35,im.p1)
+            p2 = planeta(500, [plax+280, play], [0,17],25,im.p6)
+            p3 = planeta(500, [plax+123, play], [0,-25],35,im.p5)
+            p4 = planeta(500, [plax+240, play], [0,-18],35,im.p4)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]-p1.tamaño/2,p1.posicion[1]-p1.tamaño/2-6), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1302,17 +1304,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[1]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/24.png")
+            e1 = planeta(300000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax, play+135], [50,0],35,im.p7)
+            p2 = planeta(500, [plax, play+250], [35,0],25,im.p24)
+            p3 = planeta(500, [plax-135, play], [0,34],35,im.p9)
+            p4 = planeta(500, [plax-180, play], [0,34],35,im.p8)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]+20,p1.posicion[1]-p1.tamaño/2+10), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1324,17 +1327,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[2]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/11.png")
+            e1 = planeta(300000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax, play+300], [20,0],35,im.p10)
+            p2 = planeta(500, [plax, play-500], [15,0],25,im.p11)
+            p3 = planeta(500, [plax+200, play], [0,24],35,im.p12)
+            p4 = planeta(500, [plax+100, play], [0,54],35,im.p13)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño/2), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1347,17 +1351,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
               
         if nm3[3]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/15.png")
+            e1 = planeta(300000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax, play+230], [25,0],35,im.p14)
+            p2 = planeta(500, [plax, play-100], [45,0],25,im.p15)
+            p3 = planeta(500, [plax-250, play], [0,30],35,im.p16)
+            p4 = planeta(500, [plax+300, play], [0,29],35,im.p17)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]+2,p1.posicion[1]-p1.tamaño/2+2), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1370,17 +1375,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[4]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/19.png")
+            e1 = planeta(300000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax, play+200], [30,0],35,im.p18)
+            p2 = planeta(500, [plax, play+400], [25,0],25,im.p19)
+            p3 = planeta(500, [plax, play+250], [30,0],35,im.p20)
+            p4 = planeta(500, [plax, play+300], [30,0],35,im.p21)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]+2,p1.posicion[1]-p1.tamaño/2+2), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1393,17 +1399,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[5]==True:
-            dt=0.3
-            combustible=100
+            dt=0.6
+            combustible=30
             juego=True
             imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            e1 = planeta(900000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax-250, play], [0,60],35,im.p22)
+            p2 = planeta(50, [plax-500, play], [0,29],25,im.p23)
+            p3 = planeta(300, [plax-350, play], [0,34],35,im.p24)
+            p4 = planeta(300, [plax-300, play], [0,34],35,im.p1)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]+p1.tamaño/2+7), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1416,17 +1423,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[6]==True:
-            dt=0.3
-            combustible=100
+            dt=0.6
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p4)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/14.png")
+            e1 = planeta(1000000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax+90, play], [0,100],35,im.p11)
+            p2 = planeta(500, [plax+150, play], [0,90],25,im.p14)
+            p3 = planeta(500, [plax+200, play], [0,80],35,im.p21)
+            p4 = planeta(500, [plax+250, play], [0,70],35,im.p5)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]-20,p1.posicion[1]-p1.tamaño/2+100), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1438,17 +1446,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[7]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/7.png")
+            e1 = planeta(1000000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax-100, play], [0,100],55,im.p6)
+            p2 = planeta(500, [plax+300, play], [0,50],25,im.p7)
+            p3 = planeta(500, [plax, play-100], [90,0],35,im.p9)
+            p4 = planeta(500, [plax, play-300], [60,0],35,im.p14)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]+25,p1.posicion[1]-p1.tamaño/2+140), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1460,17 +1469,18 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[8]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=30
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            imp2=p1=pygame.image.load("imagenes/planets/19.png")
+            e1 = planeta(1000000, [600, 360], [0,0],100,im.e1)
+            p1 = planeta(500, [plax, play+100], [100,0],50,im.p18)
+            p2 = planeta(500, [plax, play-100], [-100,0],25,im.p19)
+            p3 = planeta(500, [plax, play+150], [85,0],35,im.p20)
+            p4 = planeta(500, [plax, play-150], [-85,0],35,im.p21)
+            COHETE=planeta(1*10**(-10), (p1.posicion[0]+120,p1.posicion[1]-70), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,p2,p3,p4]
+            planetasv=[p1,p2,p3,p4]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1483,17 +1493,26 @@ def main():
             fondo_nivel=im.fondo_mundo3
             
         if nm3[9]==True:
-            dt=0.3
-            combustible=100
+            dt=0.9
+            combustible=10
             juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
+            plax, play=(600+600+150)/2,360
+            imp2=p1=pygame.image.load("imagenes/planets/14.png")
+            e1 = planeta(500000, [600, 360], [0,30],70,im.e1)
+            e2 = planeta(500000, [600+150, 360], [0,-30],70,im.e1)
+            
+            p1 = planeta(50, [plax+300, play], [0,50],40,im.p11)
+            p2 = planeta(50, [plax-300, play], [0,-50],25,im.p12)
+            
+            p3 = planeta(500, [plax, play+350], [-50,0],40,im.p13)
+            p4 = planeta(500, [plax, play-350], [50,0],35,im.p14)
+            
+            p5 = planeta(500, [plax, play+400], [-50,0],40,im.p15)
+            p6 = planeta(500, [plax, play-400], [50,0],35,im.p16)
+            
+            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño/2+75), [10,-4],10,im.e4)
+            planetas= [COHETE,p1,e1,e2,p2,p3,p4,p5,p6]
+            planetasv=[p1,p2,p3,p4,p5,p6]
             poscohete=(1,1)
             movimiento=False
             t=0
@@ -1505,233 +1524,7 @@ def main():
             fondojuegox,fondojuegoy=0,0
             fondo_nivel=im.fondo_mundo3
             
-        if nm3[10]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[10]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[50]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[11]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[11]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[51]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[12]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[12]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[52]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[13]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[13]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[53]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[14]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[14]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[54]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[15]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p4)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[15]=False
-            if True in l:        
-                l[l.index(True)]=False
-            l[55]=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[16]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[16]=False
-            if True in l:        
-                l[l.index(True)]=False
-            l[56]=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[17]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[17]=False
-            if True in l:        
-                l[l.index(True)]=False
-            l[57]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[18]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[18]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[58]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
-            
-        if nm3[19]==True:
-            dt=0.3
-            combustible=100
-            juego=True
-            imp2=p1=pygame.image.load("imagenes/planets/23.png")
-            e1 = planeta(100000, [600, 360], [0,0],100,im.e3)
-            p1 = planeta(50, [600, 250], [30,0],50,im.p5)
-            p2 = planeta(50, [800, 100], [15,0],50,im.p6)
-            p3 = planeta(50, [200, 300], [0,14],50,im.p3)
-            COHETE=planeta(1*10**(-10), (p1.posicion[0],p1.posicion[1]-p1.tamaño+20), [10,-4],10,im.e4)
-            planetas= [COHETE,p1,e1,p2,p3]
-            planetasv=[p1,p2,p3]
-            poscohete=(1,1)
-            movimiento=False
-            t=0
-            nm3[19]=False
-            if True in l:        
-               l[l.index(True)]=False
-            l[59]=True
-            juego=True
-            fondojuegox,fondojuegoy=0,0
-            fondo_nivel=im.fondo_mundo3
+        
         
         """ #########################################################"""
         """ #########################################################"""
@@ -1842,22 +1635,23 @@ def main():
                         UP=0
                 """"### R ### """
                 if event.key==pygame.K_r:
-                    if juego==True or lost==True or siguiente_nivel==True:
-                        pygame.mixer.Sound.play(s.click)
-                        click=False
-                        xinicial,yinicial=mousex,mousey
-                        COHETE.posicion[0]=-100
-                        COHETE.posicion[1]=-100
-                        siguiente_nivel=False
-                        lost=False
-                        if True in l:
-                            if 0<=l.index(True)<20:
-                                nm1[l.index(True)]=True
-                            elif 20<=l.index(True)<40:
-                                nm2[l.index(True)-20]=True
-                            elif 40<=l.index(True)<60:
-                                nm3[l.index(True)-40]=True
-                        juego=True
+                    if ganar==False:
+                        if juego==True or lost==True or siguiente_nivel==True:
+                            pygame.mixer.Sound.play(s.click)
+                            click=False
+                            xinicial,yinicial=mousex,mousey
+                            COHETE.posicion[0]=-100
+                            COHETE.posicion[1]=-100
+                            siguiente_nivel=False
+                            lost=False
+                            if True in l:
+                                if 0<=l.index(True)<20:
+                                    nm1[l.index(True)]=True
+                                elif 20<=l.index(True)<40:
+                                    nm2[l.index(True)-20]=True
+                                elif 40<=l.index(True)<60:
+                                    nm3[l.index(True)-40]=True
+                            juego=True
                 """### P ###"""
                 if event.key==pygame.K_p:
                     if juego==True:
@@ -2183,6 +1977,10 @@ def main():
             for m in planetas:
                 m.e1=m.posicion-(e1.tamaño/2,e1.tamaño/2)
                 m.e1=np.sqrt(((m.centro[0])-(e1.posicion[0]))**2+((m.centro[1])-(e1.posicion[1]))**2)
+            if e2 in planetas:
+                for m in planetas:
+                    m.e2=m.posicion-(e2.tamaño/2,e2.tamaño/2)
+                    m.e2=np.sqrt(((m.centro[0])-(e2.posicion[0]))**2+((m.centro[1])-(e2.posicion[1]))**2)
             
             # Calcular sumatoria de fuerzas sobre un cuerpo 
             for m in planetas:
@@ -2290,7 +2088,22 @@ def main():
             if e1.cohete<e1.tamaño/2+6:
                 juego=False
                 lost=True
-                
+            if e2 in planetas:
+                if e2.cohete<e2.tamaño/2+6:
+                    juego=False
+                    lost=True
+                for n in planetasv:
+                    distancia = math.hypot(e2.posicion[0] - n.posicion[0], e2.posicion[1] - n.posicion[1])
+                    if distancia <= (e2.tamaño/2) + (n.tamaño/2):
+                        explosion=explosiones(((n.centro[0]+e2.centro[0])/2,(n.centro[1]+e2.centro[1])/2),'t2')
+                        Explosiones.add(explosion)
+                        planetasv.remove(n)
+                        planetas.remove(n)
+                        n.kill()
+                        e2.masa = e2.masa + n.masa
+                        e2.momentum = e2.momentum + n.momentum
+                        if p2.e2<p2.tamaño/2+p2.tamaño/2:
+                            p2.posicion[0],p2.posicion[1]=10**1,10**1
             #Iniciar cada frame completamente negro
             pantalla.fill((0,0,0))
             l1=l[0:20]
@@ -2979,7 +2792,7 @@ def main():
             sepx=175
             sepy=125
             pos_nivelesx=ancho/5
-            pos_nivelesy=alto/5
+            pos_nivelesy=alto/3
             b_lv41=boton(im.b_niveles[40],im.bo_niveles[40],pos_nivelesx,pos_nivelesy)
             b_lv42=boton(im.b_niveles[41],im.bo_niveles[41],pos_nivelesx+sepx,pos_nivelesy)
             b_lv43=boton(im.b_niveles[42],im.bo_niveles[42],pos_nivelesx+sepx*2,pos_nivelesy)
@@ -2990,16 +2803,6 @@ def main():
             b_lv48=boton(im.b_niveles[47],im.bo_niveles[47],pos_nivelesx+sepx*2,pos_nivelesy+sepy)
             b_lv49=boton(im.b_niveles[48],im.bo_niveles[48],pos_nivelesx+sepx*3,pos_nivelesy+sepy)
             b_lv50=boton(im.b_niveles[49],im.bo_niveles[49],pos_nivelesx+sepx*4,pos_nivelesy+sepy)
-            b_lv51=boton(im.b_niveles[50],im.bo_niveles[50],pos_nivelesx,pos_nivelesy+sepy*2)
-            b_lv52=boton(im.b_niveles[51],im.bo_niveles[51],pos_nivelesx+sepx,pos_nivelesy+sepy*2)
-            b_lv53=boton(im.b_niveles[52],im.bo_niveles[52],pos_nivelesx+sepx*2,pos_nivelesy+sepy*2)
-            b_lv54=boton(im.b_niveles[53],im.bo_niveles[53],pos_nivelesx+sepx*3,pos_nivelesy+sepy*2)
-            b_lv55=boton(im.b_niveles[54],im.bo_niveles[54],pos_nivelesx+sepx*4,pos_nivelesy+sepy*2)
-            b_lv56=boton(im.b_niveles[55],im.bo_niveles[55],pos_nivelesx,pos_nivelesy+sepy*3)
-            b_lv57=boton(im.b_niveles[56],im.bo_niveles[56],pos_nivelesx+sepx,pos_nivelesy+sepy*3)
-            b_lv58=boton(im.b_niveles[57],im.bo_niveles[57],pos_nivelesx+sepx*2,pos_nivelesy+sepy*3)
-            b_lv59=boton(im.b_niveles[58],im.bo_niveles[58],pos_nivelesx+sepx*3,pos_nivelesy+sepy*3)
-            b_lv60=boton(im.b_niveles[59],im.bo_niveles[59],pos_nivelesx+sepx*4,pos_nivelesy+sepy*3)
             
             
             if cursor.colliderect(b_lv41.rect) and click==True and avance[40]==1:
@@ -3082,85 +2885,7 @@ def main():
                 juego=True
                 nm3[9]=True
                 LEFT=0.00001
-            if cursor.colliderect(b_lv51.rect) and click==True and avance[50]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[10]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv52.rect) and click==True and avance[51]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[11]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv53.rect) and click==True and avance[52]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[12]=True
-            if cursor.colliderect(b_lv54.rect) and click==True and avance[53]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[13]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv55.rect) and click==True and avance[54]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[14]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv56.rect) and click==True and avance[55]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[15]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv57.rect) and click==True and avance[56]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[16]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv58.rect) and click==True and avance[57]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[17]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv59.rect) and click==True and avance[58]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[18]=True
-                LEFT=0.00001
-            if cursor.colliderect(b_lv60.rect) and click==True and avance[59]==1:
-                pygame.mixer.Sound.play(s.click)
-                click=False
-                mundo3=False
-                xinicial,yinicial=mousex,mousey
-                juego=True
-                nm3[19]=True
-                LEFT=0.00001
+            
 
             #actualizacion botones menu2
             b_lv41.update(pantalla, cursor)
@@ -3173,21 +2898,11 @@ def main():
             b_lv48.update(pantalla, cursor)
             b_lv49.update(pantalla, cursor)
             b_lv50.update(pantalla, cursor)
-            b_lv51.update(pantalla, cursor)
-            b_lv52.update(pantalla, cursor)
-            b_lv53.update(pantalla, cursor)
-            b_lv54.update(pantalla, cursor)
-            b_lv55.update(pantalla, cursor)
-            b_lv56.update(pantalla, cursor)
-            b_lv57.update(pantalla, cursor)
-            b_lv58.update(pantalla, cursor)
-            b_lv59.update(pantalla, cursor)
-            b_lv60.update(pantalla, cursor)
+          
             
             av5=avance[40:45]
             av6=avance[45:50]
-            av7=avance[50:55]
-            av8=avance[55:60]
+
             for i in av5:
                 for n in range(5):
                     if avance[n+40]==0:
@@ -3196,14 +2911,7 @@ def main():
                 for n in range(5):
                     if avance[n+45]==0:
                         pantalla.blit(im.bb_niveles[n+45],(pos_nivelesx+sepx*n,pos_nivelesy+sepy*1))
-            for i in av7:
-                for n in range(5):
-                    if avance[n+50]==0:
-                        pantalla.blit(im.bb_niveles[n+50],(pos_nivelesx+sepx*n,pos_nivelesy+sepy*2))
-            for i in av8:
-                for n in range(5):
-                    if avance[n+55]==0:
-                        pantalla.blit(im.bb_niveles[n+55],(pos_nivelesx+sepx*n,pos_nivelesy+sepy*3))
+           
 
 # m.centro=m.posicion-(COHETE.tamaño/2,COHETE.tamaño/2)
  #m.cohete=np.sqrt(((p2.centro[0])-(COHETE.posicion[0]))**2+((p2.centro[1])-(COHETE.posicion[1]))**2)
@@ -3213,7 +2921,7 @@ def main():
         nt=nm1+nm2+nm3
         lm1=l[0:19]
         lm2=l[20:39]
-        lm3=l[40:60]
+        lm3=l[40:50]
         try:
             for i in l: 
                 if np.sqrt((((p2.posicion-(COHETE.tamaño/2,COHETE.tamaño/2))[0])-(COHETE.posicion[0]))**2+(((p2.posicion-(COHETE.tamaño/2,COHETE.tamaño/2))[1])-(COHETE.posicion[1]))**2)<p2.tamaño/2+COHETE.tamaño/2+.5 and i==True:
@@ -3222,8 +2930,8 @@ def main():
                     juego=False
                     COHETE.posicion[0]=1000*100
                     COHETE.posicion[1]=-1000*100
-                    if l[59]==True:
-                        l[59]=False
+                    if l[49]==True:
+                        l[49]=False
                         juego=False
                         ganar=True
         except UnboundLocalError or ValueError or AttributeError: pass
@@ -3325,14 +3033,10 @@ def main():
             b_pausa2.update(pantalla, cursor)
             b_menu3.update(pantalla, cursor)
             
-
         """######################################################"""
         """######################################################"""
         """######################################################"""
         """######################################################"""
-
-            
-            
             
         if como_jugar==True:
             if intro_old is None:
@@ -3451,6 +3155,7 @@ def main():
         """######################################################"""
         """######################################################"""
         """######################################################"""
+        
         if ganar==True:
             if intro_old is None:
                 pantalla1=pantalla.blit(im.fondo_ganar,(pos_fondo,0))
@@ -3461,7 +3166,15 @@ def main():
             if pos_fondo>1280:
                 pos_fondo=0
             pos_fondo=pos_fondo+vel_fondo
-            texto("Ganaste",60,ancho/2-125,50,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            al=160
+            texto("FIN",80,ancho/2-100,50+450,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("   ",60,ancho/2-125,50,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("Después  de  años  en  un  largo  viaje  alrededor",45,ancho/2-525+50,al,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("del universo los tripulantes que sobrevivieron",45,ancho/2-525+50,al+45,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("llegaron a su destino, pero  para su mala suerte",45,ancho/2-525+50,al+90,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("ya  no  habia  nadie,  todos  habian  muerto  hace",45,ancho/2-525+50,al+135,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("mucho tiempo en  una guerra nuclear. Al no tener ",45,ancho/2-525+50,al+180,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("nada, todos los viajeros restantes murieron.",45,ancho/2-525+50,al+225,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
         """######################################################"""
         """######################################################"""
         """######################################################"""
