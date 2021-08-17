@@ -37,7 +37,7 @@ fondo1=pygame.transform.scale(pygame.image.load("imagenes/fondos/m.png"),(1280,7
 ancho,alto=1280,720
 pantalla = pygame.display.set_mode((ancho, alto))#,pygame.FULLSCREEN)
 #icono
-pygame.display.set_icon(im.icono)
+pygame.display.set_icon(pygame.transform.scale(pygame.image.load("icon.png"),(500,500)))
 #CLASES Y DEFINICIONES DE FUNCIÓNES
 class cursor(pygame.Rect):
     def __init__(self):
@@ -91,8 +91,6 @@ def texto(texto,tamaño=30,x=0,y=0,color=c.white,fuente=None):
     font=pygame.font.Font(fuente,tamaño)
     tex=font.render(texto,0,color)
     pantalla.blit(tex, (x,y))
-
-
 
 """ explosiones """
 animacion_explosion={'t1':[],'t2':[],'t3':[],'t4':[]}
@@ -192,13 +190,15 @@ def rand(a):
 def main():
     pygame.init()   
     pygame.mixer.init()
-    pygame.display.set_caption('Juego')
+    pygame.display.set_caption('Gravity Survive')
     
     #SONIDOS
-    vol=0
+    vol=0.25
     sound=0.5
     pygame.mixer.music.set_volume(vol)
-    pygame.mixer.Sound.set_volume(s.click,sound)
+    pygame.mixer.Sound.set_volume(s.click,sound-0.4)
+    pygame.mixer.Sound.set_volume(s.win,sound+.1)
+    pygame.mixer.Sound.set_volume(s.loose,sound+.1)
     sclick=pygame.mixer.Sound.play(s.click)
       
     #Pantallas del juego
@@ -219,6 +219,16 @@ def main():
     como_jugar4=False
     como_jugar5=False
     como_jugar6=False
+    pmundo1=False
+    pmundo2=False
+    pmundo3=False
+    mm1=1
+    mm2=1
+    mm3=1
+    mmm1=1
+    mmm2=1
+    mmm3=1
+    creditos=False
     #Variables globales
     global click
     click=False
@@ -230,8 +240,8 @@ def main():
     
     #Posiciones de los sliders
     volx=450
-    posvolx=625
-    possonx=625
+    posvolx=625-100
+    possonx=625-30
 
     #pantalla de menu
     vel_fondo=2
@@ -1601,7 +1611,9 @@ def main():
                         ganar=False
                         juego=False
                         menu2=False
-                    
+                    if creditos==True:
+                        creditos=False
+                        menu=True
                     if como_jugar==True or como_jugar2==True or como_jugar3==True or como_jugar4==True or como_jugar5==True:
                         como_jugar=False
                         como_jugar2=False
@@ -1689,6 +1701,9 @@ def main():
         """ #########################################################"""
         #menu
         if menu==True:
+            
+            
+            mm=0
             #Teclas
             UP,DOWN,RIGHT,LEFT="falso","falso","falso","falso"
             
@@ -1704,7 +1719,7 @@ def main():
             pos_fondo=pos_fondo+vel_fondo
 
             if pygame.mixer.music.get_busy()==False:
-                musica_menu=pygame.mixer.music.load("sonidos/principal/TheySay-menu.mp3")
+                musica_menu=pygame.mixer.music.load("sonidos/principal/POL-fragments-short.wav")
                 pygame.mixer.music.play(-1,0,239)
             
             #intro
@@ -1762,7 +1777,7 @@ def main():
     
             
             #boton de jugar
-            pos_b_playx,pos_b_playy=(ancho/2)+250,(alto/2)-50
+            pos_b_playx,pos_b_playy=(ancho/2)+250,(alto/2)-25
             
             b_play=boton(im.b_jugar,im.bo_jugar,pos_b_playx,pos_b_playy)
             if cursor.colliderect(b_play.rect) and click==True:
@@ -1773,14 +1788,14 @@ def main():
                 click=False
                 
             #boton de como jugar
-            b_como_jugar=boton(im.b_como_jugar,im.bo_como_jugar,pos_b_playx,pos_b_playy+75)
+            b_como_jugar=boton(im.b_como_jugar,im.bo_como_jugar,pos_b_playx,pos_b_playy+60)
             if cursor.colliderect(b_como_jugar.rect) and click==True:
                 pygame.mixer.Sound.play(s.click)
                 menu=False
                 como_jugar=True
                 click=False
             #boton de salir
-            b_salir=boton(im.b_salir,im.bo_salir,pos_b_playx,pos_b_playy+150)                            
+            b_salir=boton(im.b_salir,im.bo_salir,pos_b_playx,pos_b_playy+180)                            
             if cursor.colliderect(b_salir.rect) and click==True:
                 pygame.mixer.Sound.play(s.click)
                 file=open("save.txt","w")
@@ -1791,21 +1806,58 @@ def main():
                 pygame.quit()
                 sys.exit()    
             
-
+            b_creditos=boton(im.b_creditos,im.bo_creditos,pos_b_playx,pos_b_playy+120)
+            if cursor.colliderect(b_creditos.rect) and click==True:
+                pygame.mixer.Sound.play(s.click)
+                menu=False
+                creditos=True
+                pantalla.blit(fondo1,(0,0))
+                click=False
+                
             #actualizacion botones menu
             b_play.update(pantalla, cursor)
             b_salir.update(pantalla,cursor)
             b_como_jugar.update(pantalla,cursor)
+            b_creditos.update(pantalla,cursor)
         
         
-        
+        pantalla.blit(pygame.transform.scale(pygame.image.load("imagenes/menu_principal/nombre.png"),(int(700/1.8),int(500/1.7))),(790,50))
+        #creditos
+        if creditos==True:
+            if intro_old is None:
+                pantalla1=pantalla.blit(fondo1,(pos_fondo,0))
+                pantalla2=pantalla.blit(fondo1,(pos_fondo-1280,0))
+            else:
+                pantalla1=pantalla.blit(fondo1,intro_old,intro_old)
+                pantalla2=pantalla.blit(fondo1,intro_old,intro_old)
+                
+            if pos_fondo>1280:
+                pos_fondo=0
+            pos_fondo=pos_fondo+vel_fondo
+
+            if pygame.mixer.music.get_busy()==False:
+                musica_menu=pygame.mixer.music.load("sonidos/principal/POL-fragments-short.wav")
+                pygame.mixer.music.play(-1,0,239)
             
-        
+            
+            
+            pantalla.blit(pygame.transform.scale(im.fond,(500,560)),(390,90))
+            texto("Créditos",75,540-50,75+40,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("Música de fondo de PlayOnLoop.com ",30,540-130,75+120+20+20-20,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("con licencia Creative Commons by ",30,540-130+5,75+120+60,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("     Attribution 4.0 y canciones",30,540-130,75+120+100,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("   Returning Home, The beginning",30,540-130,75+120+100+40,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("           y Route 66 tomadas de  ",30,540-130,75+120+100+80,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto(" https://www.fiftysounds.com/es/ ",30,540-130,75+120+100+120,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            
+            texto("Imagenes por Sergio Prieto",30,540-130+40,75+120+100+50+20+130,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("y Helena Diaz con ayuda de",30,540-130+40+4,75+120+100+90+20+130,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("VQGAN+CLIP bajo licencia MIT.",30,540-130+40-12,75+120+100+90+20+40+130,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
         #Pausa
         pospausax,pospausay=498,340
         if pausa==True:
             pantalla.blit(fondo_nivel,(fondojuegox, fondojuegoy))
-            pygame.draw.rect(pantalla, c.darkslateblue, [390, 90, 500,500])
+            pantalla.blit(im.fond,(390,90))
             texto("Pausa",75,540,75+40,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
              # VOLUMEN DE LA MUSICA
             #texto("Musica",35,310+65,335-147,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
@@ -1852,7 +1904,8 @@ def main():
                     possonx=740
                     sound=1
                 pygame.mixer.Sound.set_volume(s.click,sound)
-                
+                pygame.mixer.Sound.set_volume(s.win,sound)
+                pygame.mixer.Sound.set_volume(s.loose,sound)
             
             b_reanudar=boton(im.b_reanudar,im.bo_reanudar,pospausax,pospausay)
             if cursor.colliderect(b_reanudar.rect) and click==True:
@@ -1904,16 +1957,20 @@ def main():
             b_pausa.update(pantalla, cursor)
             b_pausa2.update(pantalla, cursor)
             b_reanudar.update(pantalla, cursor)
-
+        if lost==False:
+            sl=0
         #lost
         if lost==True:
+            if sl==0:
+                pygame.mixer.Sound.play(s.loose)
+            sl=sl+1
             pantalla.blit(fondo_nivel,(fondojuegox, fondojuegoy))
             #Colocar la imagen de cada planeta en pantalla                              
+            pantalla.blit(pygame.transform.scale(im.fond,(500,450)),(390,90))
             
-            pygame.draw.rect(pantalla, c.darkslateblue, [400, 115, 500,450])
-            texto("La agonizante vida",50,433,160,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("de tus tripulantes",50,433,210,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("ha llegado a su fin",50,433,260,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("La agonizante vida",50,433,160-12,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("de tus tripulantes",50,433,210-12,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("ha llegado a su fin",50,433,260-12,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             
             b_reiniciar=boton(im.b_reiniciar,im.bo_reiniciar,pospausax,pospausay+15)
             if cursor.colliderect(b_reiniciar.rect) and click==True:
@@ -2139,7 +2196,8 @@ def main():
             """#################### TEXTOS EN JUEGO ####################"""
             """########################################################"""
             color_boton_juego=c.midnightblue
-            pygame.draw.rect(pantalla, color_boton_juego, [1100,30,150,100])
+            #draw
+            pantalla.blit(pygame.transform.scale(im.fond,(150,100)),(1100,30))
 
             comb=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/combustible.png"),(35,35))
             icono_vel=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/icono_vel.png"),(35,35))
@@ -2170,7 +2228,8 @@ def main():
             #texto(str(int(COHETE.posicion[0])),30,1050,150,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             #texto(str(int(COHETE.posicion[1])),30,1050,200,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             #objetivo
-            pygame.draw.rect(pantalla, color_boton_juego, [25,25,100,100])
+            #pygame.draw.rect(pantalla, color_boton_juego, [25,25,100,100])
+            pantalla.blit(pygame.transform.scale(im.fond,(100,100)),(25,25))
             pantalla.blit(pygame.transform.scale(imp2,(75,75)),(37.5,37.5))
             
             #actualizar pantalla
@@ -2183,6 +2242,11 @@ def main():
         """ #########################################################"""    
         """ #########################################################"""
         if menu2==True:
+            mm=0
+            if pygame.mixer.music.get_busy()==False:
+                musica_menu=pygame.mixer.music.load("sonidos/principal/POL-fragments-short.wav")
+                pygame.mixer.music.play(-1,0,239)
+                
             pmundo1,pmundo2,pmundo3=False,False,False
             UP,DOWN,RIGHT,LEFT="falso","falso","falso","falso"
             
@@ -2215,7 +2279,7 @@ def main():
                 
             #boton de mundo2
             b_mundo2=boton(im.b_mundo2,im.bo_mundo2,pos_b_mundosx+(3*ancho)/10,pos_b_mundosy)
-            if cursor.colliderect(b_mundo2.rect) and click==True:
+            if cursor.colliderect(b_mundo2.rect) and click==True and avance[20]==1:
                 pygame.mixer.Sound.play(s.click)
                 click=False
                 menu2=False
@@ -2223,7 +2287,7 @@ def main():
                 
             #boton de mundo3
             b_mundo3=boton(im.b_mundo3,im.bo_mundo3,pos_b_mundosx+(6*ancho)/10,pos_b_mundosy)                            
-            if cursor.colliderect(b_mundo3.rect) and click==True:
+            if cursor.colliderect(b_mundo3.rect) and click==True and avance[40]==1:
                 pygame.mixer.Sound.play(s.click)
                 click=False
                 menu2=False
@@ -2231,8 +2295,10 @@ def main():
                 
             #actualizacion botones menu2
             b_mundo1.update(pantalla, cursor)
-            b_mundo2.update(pantalla,cursor)
-            b_mundo3.update(pantalla,cursor)
+            if avance[20]==1:
+                b_mundo2.update(pantalla,cursor)
+            if avance[40]==1:
+                b_mundo3.update(pantalla,cursor)
             
         """ #########################################################"""
         """ #########################################################"""
@@ -2917,7 +2983,7 @@ def main():
  #m.cohete=np.sqrt(((p2.centro[0])-(COHETE.posicion[0]))**2+((p2.centro[1])-(COHETE.posicion[1]))**2)
        #for m in planetas:             
         """######### condiciones para pasar de nivel #######"""
-        
+
         nt=nm1+nm2+nm3
         lm1=l[0:19]
         lm2=l[20:39]
@@ -2935,11 +3001,16 @@ def main():
                         juego=False
                         ganar=True
         except UnboundLocalError or ValueError or AttributeError: pass
-            
+        if siguiente_nivel==False:
+            sw=0    
         if siguiente_nivel==True and siguiente2==True:
+            if sw==0:
+                pygame.mixer.Sound.play(s.win)
+            sw=sw+1
+            
             pantalla.blit(fondo_nivel,(fondojuegox, fondojuegoy))
 
-            pygame.draw.rect(pantalla, c.darkslateblue, [400, 150, 500,450])
+            pantalla.blit(pygame.transform.scale(im.fond,(500,450)),(400,130))
             
             texto("Por ahora",50,433+100,75+80+20,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Sigues con vida",50,433+37,75+80+70,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
@@ -2965,6 +3036,10 @@ def main():
                     for m in nm3:
                         m=False
                     mundo3=True 
+            
+            if True in l:
+                avance[l.index(True)+1]=1
+
             
             b_pausa2=boton(im.b_reiniciar,im.bo_reiniciar,pospausax,pospausay+70-20)
             if cursor.colliderect(b_pausa2.rect) and click==True:
@@ -3052,7 +3127,7 @@ def main():
             
             texto("OBJETIVO",60,ancho/2-125,150,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Su objetivo es llevar un cohete con tripulantes a su",40,175,250,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("destino pasando por distintos sistemas planetarios",40,175,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("planeta pasando por distintos sistemas planetarios",40,175,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("sin  dejarlos  morir. Para esto debe  tener en cuenta ",40,175,350,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("el  movimiento  orbital  de   los  planetas  y  algunas",40,175,400,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("                       limitaciones del cohete.",40,175,450,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
@@ -3071,9 +3146,9 @@ def main():
             
             
             texto("En tu viaje encontraras diversos objetos con los que podras",40,110,140,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("interactuar, por ejemplo:  ",40,110,190,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("Estrella",40,250,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("Planeta",40,550,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("interactuar.:  ",40,110,190,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("Estrellas",40,250,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("Planetas",40,550,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Cohete",40,850,440,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             pantalla.blit(pygame.transform.scale(im.e2,(150,150)),(250,280))
             
@@ -3095,14 +3170,14 @@ def main():
             texto("Controles",60,ancho/2-125,150,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             
             pfx,pfy=180,380
-            pantalla.blit(pygame.transform.rotate(im.flecha,180),(pfx,pfy))
-            pantalla.blit(pygame.transform.rotate(im.flecha,90),(pfx+60,pfy-60))
-            pantalla.blit(pygame.transform.rotate(im.flecha,270),(pfx+60,pfy))
-            pantalla.blit(pygame.transform.rotate(im.flecha,0),(pfx+120,pfy))
+            pantalla.blit(pygame.transform.rotate(im.flecha,180),(pfx,pfy-5))
+            pantalla.blit(pygame.transform.rotate(im.flecha,90),(pfx+60,pfy-60-5))
+            pantalla.blit(pygame.transform.rotate(im.flecha,270),(pfx+60,pfy-5))
+            pantalla.blit(pygame.transform.rotate(im.flecha,0),(pfx+120,pfy-5))
             pantalla.blit(pygame.transform.rotate(im.b_r,0),(pfx+320,pfy-55))
             pantalla.blit(pygame.transform.rotate(im.b_p,0),(pfx+475,pfy-55))
             pantalla.blit(pygame.transform.rotate(im.b_esc,0),(pfx+630,pfy-55))
-            pantalla.blit(pygame.transform.rotate(im.b_space,0),(pfx+785,pfy-70))
+            pantalla.blit(pygame.transform.rotate(im.b_space,0),(pfx+785-15,pfy-70))
             texto("Izquierda",25,pfx-115,pfy+10,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Derecha",25,pfx+175,pfy+10,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Arriba",25,pfx+49,pfy-90,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
@@ -3111,9 +3186,56 @@ def main():
             texto("Pausa",25,pfx+494,pfy-80,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Atras",25,pfx+649,pfy-80,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("Pantalla completa",25,pfx+772,pfy-80,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+        
+        if como_jugar4==True:
+            if intro_old is None:
+                pantalla1=pantalla.blit(im.fondo_ganar,(pos_fondo,0))
+                pantalla2=pantalla.blit(im.fondo_ganar,(pos_fondo-1280,0))
+            else:
+                pantalla1=pantalla.blit(im.fondo_ganar,intro_old,intro_old)
+                pantalla2=pantalla.blit(im.fondo_ganar,intro_old,intro_old)
+            if pos_fondo>1280:
+                pos_fondo=0
+            pos_fondo=pos_fondo+vel_fondo
             
-        if como_jugar==True or como_jugar2==True or como_jugar3==True or como_jugar4==True:
-            b_adelante=boton(pygame.transform.rotate(im.b_atras,180),pygame.transform.rotate(im.bo_atras,180),pos_b_playx,pos_b_playy+225)                            
+            texto("Destino",60,ancho/2-125,150,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+           
+            
+            texto("En cada  nivel habra un cuadro como el que se muestra.",40,175,250,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("En el que esta su destino, estará hubicado en la parte",40,175,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("superior izquierda de la pantalla.",40,175,350,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            pantalla.blit(pygame.transform.scale(im.fond,(100,100)),(25+560,25+400))
+            pantalla.blit(pygame.transform.scale(im.p2,(75,75)),(37.5+560,37.5+400))
+            
+        if como_jugar5==True:
+            if intro_old is None:
+                pantalla1=pantalla.blit(im.fondo_ganar,(pos_fondo,0))
+                pantalla2=pantalla.blit(im.fondo_ganar,(pos_fondo-1280,0))
+            else:
+                pantalla1=pantalla.blit(im.fondo_ganar,intro_old,intro_old)
+                pantalla2=pantalla.blit(im.fondo_ganar,intro_old,intro_old)
+            if pos_fondo>1280:
+                pos_fondo=0
+            pos_fondo=pos_fondo+vel_fondo
+            
+            texto("Combustible y rapidez",60,ancho/2-280,150,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+           
+            adelan=30
+            texto("Arriba a la derecha se mostrará un cuadro como ",40,195,250,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("el que  se  ve a  continuacion  en donde  se verá ",40,195,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("cuanto combustible le queda al cohete y su rapidez",40,175,350,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            pantalla.blit(pygame.transform.scale(im.fond,(150,100)),(1100-570+adelan,30+400))
+
+            comb=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/combustible.png"),(35,35))
+            icono_vel=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/icono_vel.png"),(35,35))
+            pantalla.blit(comb,(1110-570+adelan,40+400))
+            
+            texto("100",40,1150-570+adelan,37+400,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            pantalla.blit(icono_vel,(1110-570+adelan,80+400))
+            texto(str(20),40,1150-570+adelan,80+400,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            
+        if como_jugar==True or como_jugar2==True or como_jugar3==True or como_jugar4==True or como_jugar5==True:
+            b_adelante=boton(im.b_atras,im.bo_atras,690+100,pos_b_playy+225)                            
             b_adelante.update(pantalla, cursor)
             if cursor.colliderect(b_adelante.rect) and click==True:
                 pygame.mixer.Sound.play(s.click)
@@ -3130,9 +3252,11 @@ def main():
                 elif como_jugar4==True:
                     como_jugar5=True
                     como_jugar4=False
-            
-        if como_jugar2==True or como_jugar3==True or como_jugar4==True:
-            b_atras=boton(im.b_atras,im.bo_atras,pos_b_playx-500,pos_b_playy+225)                            
+                elif como_jugar5==True:
+                    como_jugar5=False
+                    menu=True
+        if como_jugar2==True or como_jugar3==True or como_jugar4==True or como_jugar5==True:
+            b_atras=boton(pygame.transform.rotate(im.b_atras,180),pygame.transform.rotate(im.bo_atras,180),500-100,pos_b_playy+225)                            
             b_atras.update(pantalla, cursor)
             if cursor.colliderect(b_atras.rect) and click==True:
                 pygame.mixer.Sound.play(s.click)
@@ -3150,6 +3274,47 @@ def main():
                     como_jugar4=True
                     como_jugar5=False
 
+        """######################################################"""
+        """####################    MUSICA    ####################"""
+        """######################################################"""
+        """######################################################"""
+        if menu==False and menu2==False and como_jugar==False and creditos==False and como_jugar2==False and como_jugar3==False and como_jugar4==False and como_jugar5==False and como_jugar6==False:
+            if mm==0:
+                pygame.mixer.music.stop()
+            mm=mm+1
+            
+        if pmundo1==True:
+            mmm1=0
+            if pygame.mixer.music.get_busy()==False:
+                musica_menu=pygame.mixer.music.load("sonidos/principal/The Beginning.mp3")
+                pygame.mixer.music.play(-1,0,239)
+        else:
+            if mmm1==0:
+                pygame.mixer.music.stop()
+            mmm1=mmm1+1
+            
+            
+        if pmundo2==True:
+            mmm2=0
+            if pygame.mixer.music.get_busy()==False:
+                musica_menu=pygame.mixer.music.load("sonidos/principal/Returning Home.mp3")
+                pygame.mixer.music.play(-1,0,239)
+        else:
+            if mmm2==0:
+                pygame.mixer.music.stop()
+            mmm2=mmm2+1
+        
+        
+        if pmundo3==True:
+            mmm3=0
+            if pygame.mixer.music.get_busy()==False:
+                musica_menu=pygame.mixer.music.load("sonidos/principal/Route 66.mp3")
+                pygame.mixer.music.play(-1,0,239)
+        else:
+            if mmm3==0:
+                pygame.mixer.music.stop()
+            mmm3=mmm3+1
+        
             #actualizacion botones menu
         """######################################################"""
         """######################################################"""

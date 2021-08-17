@@ -6,7 +6,7 @@ import pygame
 pygame.init()
 
 #icono
-icono=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_atras.png"),(200,200))
+icono=pygame.transform.scale(pygame.image.load("icon.png"),(200,200))
 sound=pygame.transform.scale(pygame.image.load("imagenes/iconos/sound.png"),(35,35))
 music=pygame.transform.scale(pygame.image.load("imagenes/iconos/music.png"),(35,35))
 
@@ -17,8 +17,7 @@ b_ancho,b_alto=int(452/2),int(200/4)
 # Menú
 
 #fondos
-fondo1=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/negro.png"),(12800^2,12800^2))
-fondo2=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/negro.png"),(1280,720))
+
 
 """fondo_mundo1=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/negro.png"),(12800^2,12800^2))
 fondo_mundo2=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/negro.png"),(12800^2,12800^2))
@@ -30,6 +29,7 @@ fondo_mundo1=pygame.transform.scale(pygame.image.load("imagenes/fondos/am.png"),
 fondo_mundo2=pygame.transform.scale(pygame.image.load("imagenes/fondos/v.png"),(1280,720))
 fondo_mundo3=pygame.transform.scale(pygame.image.load("imagenes/fondos/r.png"),(1280,720))
 fondo_ganar=pygame.transform.scale(pygame.image.load("imagenes/fondos/a.png"),(1280,720))
+fond=pygame.image.load("imagenes/fondos/fondo.png")
 
 #jugar
 b_jugar=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_jugar.png"),(b_ancho,b_alto))
@@ -38,22 +38,22 @@ bo_jugar=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_ju
 b_salir=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_salir.png"),(b_ancho,b_alto))
 bo_salir=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_salir.png"),(b_ancho,b_alto))
 #opciones
-b_opciones=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_opciones.png"),(b_ancho,b_alto))
-bo_opciones=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_opciones.png"),(b_ancho,b_alto))
+b_creditos=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_creditos.png"),(b_ancho,b_alto))
+bo_creditos=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_creditos.png"),(b_ancho,b_alto))
 #como jugar
 b_como_jugar=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_como_jugar.png"),(b_ancho,b_alto))
 bo_como_jugar=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_como_jugar.png"),(b_ancho,b_alto))
 
 #atras
-b_atras=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_atras.png"),(int(b_alto),int(b_alto)))
-bo_atras=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_atras.png"),(int(b_alto/2*1.5),int(b_alto/2*1.5)))
+b_atras=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_flecha.png"),(int(b_alto)+40,int(b_alto)+20))
+bo_atras=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_flecha.png"),(int(b_alto)+40,int(b_alto)+20))
 
 #Boton deslizable
 des1=pygame.image.load("imagenes/menu_principal/des1.png")
 des2=pygame.image.load("imagenes/menu_principal/des2.png")
 
 
-negro=pygame.transform.scale(pygame.image.load("negro.jpg"),(1280,720))
+
 
 #botones de mundos
 b_mundo1=pygame.transform.scale(pygame.image.load("imagenes/mundos/b_mundo1.png"),(int((2*ancho)/10),int(alto/2)))
@@ -76,8 +76,7 @@ b_siguiente=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/b_
 bo_siguiente=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/bo_siguiente.png"),(int((2*ancho)/9),int(alto/14)))
                                     
 #boton niveles
-b_lv1=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/blanco.png"),(int((2*ancho)/30),int(alto/10)))
-bo_lv1=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/morado.png"),(int((2*ancho)/30),int(alto/10)))
+
 
 """planetas"""
 plt=2
@@ -131,32 +130,32 @@ if plt!=1:
 
 """niveles"""
 b_niveles=[]
-for x in range(60):
+for x in range(50):
     niveles=f'{x+1}.png'
     imagen=pygame.image.load(f'imagenes/niveles/{niveles}')
     imagen=pygame.transform.scale(imagen,(int((2*ancho)/30),int(alto/10)))
     b_niveles=b_niveles+[imagen]
 """niveles 2"""
 bo_niveles=[]
-for x in range(60):
+for x in range(50):
     niveles=f'{x+1}.png'
     imagen=pygame.image.load(f'imagenes/niveles2/{niveles}')
     imagen=pygame.transform.scale(imagen,(int((2*ancho)/30),int(alto/10)))
     bo_niveles=bo_niveles+[imagen]
 """niveles 3"""
 bb_niveles=[]
-for x in range(60):
+for x in range(50):
     niveles=f'{x+1}.png'
     imagen=pygame.image.load(f'imagenes/niveles3/{niveles}')
     imagen=pygame.transform.scale(imagen,(int((2*ancho)/30),int(alto/10)))
     bb_niveles=bb_niveles+[imagen]
     
 """Teclas"""
-flecha=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/flecha.png"),(50,50))
+flecha=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/flecha.png"),(55,55))
 b_r=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/r.png"),(100,100))
 b_p=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/p.png"),(100,100))
 b_esc=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/esc.png"),(100,100))
-b_space=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/space.png"),(170,130))
+b_space=pygame.transform.scale(pygame.image.load("imagenes/menu_principal/space.png"),(200,130))
             
 
 """ explosiones """
