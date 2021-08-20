@@ -3201,8 +3201,8 @@ def main():
             texto("Destino",60,ancho/2-125,150,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
            
             
-            texto("En cada  nivel habra un cuadro como el que se muestra.",40,175,250,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("En el que esta su destino, estará hubicado en la parte",40,175,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("En cada  nivel habrá un cuadro como el que se muestra.",40,175,250,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("En el que esta su destino, estará ubicado en la parte",40,175,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("superior izquierda de la pantalla.",40,175,350,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             pantalla.blit(pygame.transform.scale(im.fond,(100,100)),(25+560,25+400))
             pantalla.blit(pygame.transform.scale(im.p2,(75,75)),(37.5+560,37.5+400))
@@ -3222,7 +3222,7 @@ def main():
            
             adelan=30
             texto("Arriba a la derecha se mostrará un cuadro como ",40,195,250,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
-            texto("el que  se  ve a  continuacion  en donde  se verá ",40,195,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
+            texto("el que  se  ve a  continuación  en donde  se verá ",40,195,300,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             texto("cuanto combustible le queda al cohete y su rapidez",40,175,350,c.white,"imagenes/fuentes/stalker/stalker1.ttf")
             pantalla.blit(pygame.transform.scale(im.fond,(150,100)),(1100-570+adelan,30+400))
 
