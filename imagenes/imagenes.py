@@ -6,7 +6,7 @@ import pygame
 pygame.init()
 
 #icono
-icono=pygame.transform.scale(pygame.image.load("icon.png"),(200,200))
+icono=pygame.transform.scale(pygame.image.load("imagenes/icon.png"),(200,200))
 sound=pygame.transform.scale(pygame.image.load("imagenes/iconos/sound.png"),(35,35))
 music=pygame.transform.scale(pygame.image.load("imagenes/iconos/music.png"),(35,35))
 

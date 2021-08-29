@@ -14,18 +14,21 @@ import cx_Freeze
 
 executables = [cx_Freeze.Executable("GravitySurvive.py",
                                    shortcut_name="Gravity Survive",
-                                   icon = "icon.png",
+                                   icon = "icon.ico",
+                                   base = "Win32GUI",
                                    shortcutDir=("DesktopFolder"))]
 
 build_exe_options = {"packages": ["pygame","numpy"],
                      "include_files":["imagenes",
                                       "librerias",
                                       "sonidos",
-                                      "icon.png"]}
+                                      "icon.ico"]}
 
 cx_Freeze.setup(
     name = "Gravity Survive",
     version = "1.0",
+    shortcutDir=("DesktopFolder"),
+    icon="icon.ico",
     description = "Gravity Survive",
     options = {"build_exe": build_exe_options},
     executables = executables

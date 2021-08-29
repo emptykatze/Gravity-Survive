@@ -37,7 +37,7 @@ fondo1=pygame.transform.scale(pygame.image.load("imagenes/fondos/m.png"),(1280,7
 ancho,alto=1280,720
 pantalla = pygame.display.set_mode((ancho, alto),pygame.FULLSCREEN)
 #icono
-pygame.display.set_icon(pygame.transform.scale(pygame.image.load("icon.png"),(500,500)))
+pygame.display.set_icon(pygame.transform.scale(pygame.image.load("imagenes/icon.png"),(500,500)))
 #CLASES Y DEFINICIONES DE FUNCIÓNES
 class cursor(pygame.Rect):
     def __init__(self):
